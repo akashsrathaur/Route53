@@ -1,0 +1,260 @@
+@import './cloudscape.css';
+
+/* Top Navigation Bar */
+.aws-topbar {
+  height: 48px;
+  background-color: var(--aws-topbar-bg);
+  color: var(--aws-topbar-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  user-select: none;
+}
+
+.aws-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.aws-logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.aws-logo-wrap:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.aws-logo-icon {
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #ec7211 0%, #eb5f07 100%);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.aws-topbar-search {
+  position: relative;
+  width: 380px;
+}
+
+.aws-topbar-search input {
+  width: 100%;
+  height: 32px;
+  background-color: var(--aws-topbar-search-bg);
+  border: 1px solid var(--aws-topbar-search-border);
+  border-radius: 4px;
+  padding: 0 32px 0 34px;
+  font-size: 13px;
+  color: #ffffff;
+  outline: none;
+}
+
+.aws-topbar-search input:focus {
+  border-color: var(--aws-orange-primary);
+  background-color: #1a2332;
+}
+
+.aws-topbar-search-icon {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  color: #879596;
+  pointer-events: none;
+}
+
+.aws-topbar-search-kbd {
+  position: absolute;
+  right: 8px;
+  top: 7px;
+  font-size: 11px;
+  background: rgba(255,255,255,0.15);
+  padding: 1px 5px;
+  border-radius: 3px;
+  color: #d5dbdb;
+}
+
+.aws-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.aws-topbar-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 10px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: #ffffff;
+  font-size: 13px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.aws-topbar-btn:hover {
+  background-color: var(--aws-topbar-hover);
+}
+
+.aws-account-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  font-size: 13px;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.aws-account-badge:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.aws-user-avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Sidebar Navigation */
+.aws-sidebar {
+  width: 250px;
+  background-color: var(--aws-bg-container);
+  border-right: 1px solid var(--aws-border-light);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.aws-sidebar-header {
+  padding: 16px;
+  border-bottom: 1px solid var(--aws-border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aws-sidebar-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--aws-text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.aws-sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 0;
+}
+
+.aws-nav-group-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--aws-text-secondary);
+  padding: 12px 16px 6px;
+}
+
+.aws-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  color: var(--aws-text-primary);
+  font-size: 13px;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+  border-left: 3px solid transparent;
+}
+
+.aws-nav-link:hover {
+  background-color: var(--aws-bg-hover);
+  text-decoration: none;
+  color: var(--aws-text-primary);
+}
+
+.aws-nav-link.active {
+  background-color: var(--aws-bg-selected);
+  color: var(--aws-blue-primary);
+  font-weight: 600;
+  border-left-color: var(--aws-blue-primary);
+}
+
+.aws-nav-badge {
+  font-size: 11px;
+  background: var(--aws-bg-secondary);
+  border: 1px solid var(--aws-border-subtle);
+  padding: 1px 6px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* Query Volume Chart Bar */
+.aws-chart-bar-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 140px;
+  padding: 16px 0 8px;
+}
+
+.aws-chart-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.aws-chart-bar {
+  width: 100%;
+  background: linear-gradient(180deg, #ec7211 0%, #eb5f07 100%);
+  border-radius: 3px 3px 0 0;
+  min-height: 4px;
+  transition: height 0.3s ease, background 0.2s ease;
+}
+
+.aws-chart-col:hover .aws-chart-bar {
+  background: linear-gradient(180deg, #ff9900 0%, #ec7211 100%);
+}
+
+.aws-chart-label {
+  font-size: 10px;
+  color: var(--aws-text-secondary);
+  margin-top: 6px;
+}
